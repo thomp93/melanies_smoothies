@@ -1,4 +1,4 @@
-# Import python packages
+ingredient # Import python packages
 import streamlit as st
 # from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
@@ -29,7 +29,7 @@ if ingredient_list:
     ingredients_string = ''
     for ingredient in ingredient_list:
         ingredients_string += ingredient + " "
-        st.subheader(fruit_chosen + ' Nutrition Information')
+        st.subheader(ingredient + ' Nutrition Information')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
         fv_df = st.dataframe(data=fruityvice_response.json(),use_container_width=True)
     #st.write(ingredients_string)
